@@ -20,6 +20,7 @@ void test_convert_0(void) { TEST_ASSERT_EQUAL(0, binary_convert("0")); }
 void test_convert_1(void) { TEST_ASSERT_EQUAL(1, binary_convert("1")); }
 void test_convert_110(void) { TEST_ASSERT_EQUAL(6, binary_convert("110")); }
 void test_convert_1111(void) { TEST_ASSERT_EQUAL(15, binary_convert("1111")); }
+void test_convert_invalid(void) { TEST_ASSERT_EQUAL(-1, binary_convert("invalid")); }
 void test_convert_10101101(void) {
   TEST_ASSERT_EQUAL(173, binary_convert("10101101"));
 }
@@ -55,6 +56,7 @@ int main(void) {
     RUN_TEST(test_convert_110);
     RUN_TEST(test_convert_1111);
     RUN_TEST(test_convert_10101101);
+    RUN_TEST(test_convert_invalid);
 
     RUN_TEST(test_pangram_empty);
     RUN_TEST(test_pangram_alpha);
