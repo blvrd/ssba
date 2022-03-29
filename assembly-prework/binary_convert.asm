@@ -6,7 +6,7 @@ convert_loop:
   movzx rsi, byte [rdi] ; read one byte/ascii character into the rsi register
   inc rdi               ; increment the address to point to the next character
 
-  cmp rsi, 0x0
+  cmp rsi, 0x0          ; check if we're on the nul character, meaning the end of the string
   je end
 
   ; only accept ascii '0' or '1'
