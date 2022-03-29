@@ -1,7 +1,7 @@
 section .text
 global binary_convert
 binary_convert:
-  xor rax, rax
+  xor rax, rax          ; set rax to 0
 convert_loop:
   movzx rsi, byte [rdi] ; read one byte/ascii character into the rsi register
   inc rdi               ; increment the address to point to the next character
